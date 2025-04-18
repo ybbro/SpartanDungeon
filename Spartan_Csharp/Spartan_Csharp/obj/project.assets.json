@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\uvinj\\source\\repos\\Spartan_Csharp\\Spartan_Csharp\\Spartan_Csharp.csproj",
+      "projectUniqueName": "C:\\Users\\uvinj\\OneDrive\\문서\\GitHub\\SpartanDungeon\\Spartan_Csharp\\Spartan_Csharp\\Spartan_Csharp.csproj",
       "projectName": "Spartan_Csharp",
-      "projectPath": "C:\\Users\\uvinj\\source\\repos\\Spartan_Csharp\\Spartan_Csharp\\Spartan_Csharp.csproj",
+      "projectPath": "C:\\Users\\uvinj\\OneDrive\\문서\\GitHub\\SpartanDungeon\\Spartan_Csharp\\Spartan_Csharp\\Spartan_Csharp.csproj",
       "packagesPath": "C:\\Users\\uvinj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\uvinj\\source\\repos\\Spartan_Csharp\\Spartan_Csharp\\obj\\",
+      "outputPath": "C:\\Users\\uvinj\\OneDrive\\문서\\GitHub\\SpartanDungeon\\Spartan_Csharp\\Spartan_Csharp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\uvinj\\AppData\\Roaming\\NuGet\\NuGet.Config",

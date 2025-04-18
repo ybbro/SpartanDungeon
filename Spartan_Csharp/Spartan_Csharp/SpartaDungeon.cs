@@ -172,28 +172,33 @@ namespace Spartan_Csharp
                     break;
             }
 
-            string 
-                enterInfo = "\n원하시는 행동을 입력해주세요.\n>> ",
-                wrongEnterInfo = "\n잘못된 입력입니다.\n";
-
+            string enterInfo = "\n원하시는 행동을 입력해주세요.\n>> ";
+                
             // 다음 씬으로 이동 선택
             while (isScenePlaying)
             {
                 // 입력 버퍼 비우기
-                while (Console.KeyAvailable)
-                {
-                    Console.ReadKey(true); // true = 키 출력 안 되게
-                }
+                while (Console.KeyAvailable) { Console.ReadKey(true); } // true = 키 출력 안 되게
                 Console.Write(enterInfo); // 입력 안내문 출력
                 enter = Console.ReadKey().Key; // 키 입력까지 대기 (엔터를 누르지 않아도 됨!)
 
                 if(_sceneNum == sceneNums.equip) // 장착씬에서만 동작하는 부분
                 {
                     int value_diff = enter - ConsoleKey.D0; // 입력한 키가 몇번인지
-                    if(value_diff > 0)
+                    if (value_diff > 9) // 숫자 9번 이후부터는 어떤 키인지 잘 모르겠음.. 우선 막아두기
+                    {
+                        WrongInfo();
+                        break; // 장착/해제를 반영하기 위해 씬 재시작
+                    }
+                    else if (value_diff > 0)
                     {
                         int itemIndex = value_diff - 1; // 아이템은 0번부터 시작
                         inventory.EquipOrUnequip(itemIndex); // 해당 아이템 장착/해제 토글
+                        break; // 장착/해제를 반영하기 위해 씬 재시작
+                    }
+                    else if(value_diff < 0)
+                    {
+                        WrongInfo();
                         break; // 장착/해제를 반영하기 위해 씬 재시작
                     }
                 }
@@ -203,15 +208,14 @@ namespace Spartan_Csharp
                     if(shop.isPurchase) // 구매 화면이라면
                     {
                         int value_diff = enter - ConsoleKey.D0; // 입력한 키가 몇번인지
-                        if(value_diff > 9) // 숫자 9번 이후부터는 어떤 키인지 잘 모르겠음.. 우선 막아두기
+                        if (value_diff > 9) // 숫자 9번 이후부터는 어떤 키인지 잘 모르겠음.. 우선 막아두기
                         {
-                            Console.WriteLine("\n잘못된 입력입니다.\n");
-                            Console.Beep(); // 기본 삐 소리 (800Hz, 200ms) // 이게 아니야! 하는 경고음
+                            WrongInfo();
                         }
-                        if (value_diff > 0)
+                        else if (value_diff > 0)
                         {
                             int itemIndex = value_diff - 1; // 아이템은 0번부터 시작
-                            if(!shop.StockCheck(itemIndex))
+                            if (!shop.StockCheck(itemIndex))
                             {
                                 Console.WriteLine("\n이미 구매한 아이템입니다.\n");
                                 Console.Beep(); // 기본 삐 소리 (800Hz, 200ms) // 이게 아니야! 하는 경고음
@@ -225,14 +229,16 @@ namespace Spartan_Csharp
                                 Console.WriteLine("\nGold가 부족합니다.\n");
                                 Console.Beep(); // 기본 삐 소리 (800Hz, 200ms) // 이게 아니야! 하는 경고음
                             }
+                            Thread.Sleep(500);// 구매 관련 안내를 보여주기 위해 잠시 대기
+                        }
+                        else if (value_diff < 0)
+                        {
+                            WrongInfo();
                         }
                         else
-                        {
-                            Console.WriteLine("\n잘못된 입력입니다.\n");
-                            Console.Beep(); // 기본 삐 소리 (800Hz, 200ms) // 이게 아니야! 하는 경고음
-                        }
+                            shop.isPurchase = false; // 구매 >> 상점 보기만 하기
 
-                        Thread.Sleep(1000);// 구매 관련 안내를 보여주기 위해 잠시 대기
+
                         break; // 구매 씬 재시작
                     }
                     // 상점 기본 화면이고 1을 눌렀다면 구매 화면으로 전환
@@ -246,7 +252,6 @@ namespace Spartan_Csharp
                 // 입력한 키가 해당 씬에서 다음 씬으로 넘어갈 수 있는 키라면
                 if (choiceToSceneNum.ContainsKey(enter))
                 {
-                    shop.isPurchase = false; // 구매 >> 상점 보기만 하기
                     // 다음으로 이동할 씬 값을 저장하고, 해당 씬 종료
                     sceneNums nextScene;
                     if (choiceToSceneNum.TryGetValue(enter, out nextScene))
@@ -258,14 +263,19 @@ namespace Spartan_Csharp
                 // 해당 키 입력이 유효하지 않으면 안내문 출력하고 다시 키 입력 대기로
                 else
                 {
-                    Console.WriteLine(wrongEnterInfo);
-                    Console.Beep(); // 기본 삐 소리 (800Hz, 200ms) // 이게 아니야! 하는 경고음
-                    Thread.Sleep(1000); // 시간 대기
+                    WrongInfo();
                     break; // 씬 재시작
                 }
             }
         }
 
- 
+        static void WrongInfo()
+        {
+            string wrongEnterInfo = "\n잘못된 입력입니다.\n";
+            Console.WriteLine(wrongEnterInfo);
+            Console.Beep(); // 기본 삐 소리 (800Hz, 200ms) // 이게 아니야! 하는 경고음
+            Thread.Sleep(500); // 시간 대기
+        }
+
     }
 }

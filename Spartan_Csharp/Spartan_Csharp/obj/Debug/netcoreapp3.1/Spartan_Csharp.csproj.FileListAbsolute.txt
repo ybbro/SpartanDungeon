@@ -12,3 +12,17 @@ C:\Users\uvinj\source\repos\Spartan_Csharp\Spartan_Csharp\obj\Debug\netcoreapp3.
 C:\Users\uvinj\source\repos\Spartan_Csharp\Spartan_Csharp\obj\Debug\netcoreapp3.1\Spartan_Csharp.dll
 C:\Users\uvinj\source\repos\Spartan_Csharp\Spartan_Csharp\obj\Debug\netcoreapp3.1\Spartan_Csharp.pdb
 C:\Users\uvinj\source\repos\Spartan_Csharp\Spartan_Csharp\obj\Debug\netcoreapp3.1\Spartan_Csharp.genruntimeconfig.cache
+C:\Users\uvinj\OneDrive\문서\GitHub\SpartanDungeon\Spartan_Csharp\Spartan_Csharp\bin\Debug\netcoreapp3.1\Spartan_Csharp.exe
+C:\Users\uvinj\OneDrive\문서\GitHub\SpartanDungeon\Spartan_Csharp\Spartan_Csharp\bin\Debug\netcoreapp3.1\Spartan_Csharp.deps.json
+C:\Users\uvinj\OneDrive\문서\GitHub\SpartanDungeon\Spartan_Csharp\Spartan_Csharp\bin\Debug\netcoreapp3.1\Spartan_Csharp.runtimeconfig.json
+C:\Users\uvinj\OneDrive\문서\GitHub\SpartanDungeon\Spartan_Csharp\Spartan_Csharp\bin\Debug\netcoreapp3.1\Spartan_Csharp.runtimeconfig.dev.json
+C:\Users\uvinj\OneDrive\문서\GitHub\SpartanDungeon\Spartan_Csharp\Spartan_Csharp\bin\Debug\netcoreapp3.1\Spartan_Csharp.dll
+C:\Users\uvinj\OneDrive\문서\GitHub\SpartanDungeon\Spartan_Csharp\Spartan_Csharp\bin\Debug\netcoreapp3.1\Spartan_Csharp.pdb
+C:\Users\uvinj\OneDrive\문서\GitHub\SpartanDungeon\Spartan_Csharp\Spartan_Csharp\obj\Debug\netcoreapp3.1\Spartan_Csharp.csproj.AssemblyReference.cache
+C:\Users\uvinj\OneDrive\문서\GitHub\SpartanDungeon\Spartan_Csharp\Spartan_Csharp\obj\Debug\netcoreapp3.1\Spartan_Csharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\uvinj\OneDrive\문서\GitHub\SpartanDungeon\Spartan_Csharp\Spartan_Csharp\obj\Debug\netcoreapp3.1\Spartan_Csharp.AssemblyInfoInputs.cache
+C:\Users\uvinj\OneDrive\문서\GitHub\SpartanDungeon\Spartan_Csharp\Spartan_Csharp\obj\Debug\netcoreapp3.1\Spartan_Csharp.AssemblyInfo.cs
+C:\Users\uvinj\OneDrive\문서\GitHub\SpartanDungeon\Spartan_Csharp\Spartan_Csharp\obj\Debug\netcoreapp3.1\Spartan_Csharp.csproj.CoreCompileInputs.cache
+C:\Users\uvinj\OneDrive\문서\GitHub\SpartanDungeon\Spartan_Csharp\Spartan_Csharp\obj\Debug\netcoreapp3.1\Spartan_Csharp.dll
+C:\Users\uvinj\OneDrive\문서\GitHub\SpartanDungeon\Spartan_Csharp\Spartan_Csharp\obj\Debug\netcoreapp3.1\Spartan_Csharp.pdb
+C:\Users\uvinj\OneDrive\문서\GitHub\SpartanDungeon\Spartan_Csharp\Spartan_Csharp\obj\Debug\netcoreapp3.1\Spartan_Csharp.genruntimeconfig.cache
